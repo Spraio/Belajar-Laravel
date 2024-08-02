@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>test input</h1>
-    <form action="{{ route('student.create') }}" method="post">
+    <form action="{{ route('layouts.createstudent') }}" method="post">
         <table>
             <tr>
                 <td><input type="text" name="name" id="name"></td>
