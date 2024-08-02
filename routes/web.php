@@ -22,8 +22,8 @@ Route::get('/createstudent', function () {
 
 Route::get('/students', [StudentController::class, 'index']);
 
-Route::post('/layouts/createstudent', StudentController::class.'@create')->name('student.create');
+Route::get('/layouts/createstudent', [ClassController::class, 'index']);
 
-Route::get('/students', StudentController::class.'@index')->name('layouts.createstudent');
+Route::post('/class', ClassController::class.'@create')->name('class.create');
 
-Route::get('/class', [ClassController::class, 'index']);
+Route::get('/class', ClassController::class .'@index')->name('class.index');
