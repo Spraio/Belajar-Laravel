@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Student;
 
 class StudentController extends Controller
@@ -21,13 +22,13 @@ class StudentController extends Controller
     public function create(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required',
+            'name' => 'required|max:255',
+            'nim' => 'required',
         ]);
-        $post = Post::find($id);
+        $post = Student::find($id);
         $post->update($request->all());
 
-        return redirect()->route('layouts.create')
+        return redirect()->route('student.index')
             ->with('success', 'Post updated successfully.');
     }
 }

@@ -3,15 +3,16 @@
 @section('title', 'student')
 
 @section('content')
-    <h1>test input</h1>
-    <form action="{{ route('student.create') }}" method="post">
-        <table>
-            <tr>
-                <td><input type="text" name="name" id="name"></td>
-            </tr>
-            <tr>
-                <td> <input type="submit" value="create"></td>
-            </tr>
-        </table>
-    </form>
+
+        <h1>test input</h1>
+        <form action="{{ route('class.create') }}" method="post">
+            @csrf
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+
 @endsection
