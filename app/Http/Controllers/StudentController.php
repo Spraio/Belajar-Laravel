@@ -18,16 +18,10 @@ class StudentController extends Controller
         return view('layouts.createstudent');
     }
 
-    public function create(Request $request, $id)
+    public function tambahstudent()
     {
-        $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required',
+        Student::create([
+            'name' => 'name',
         ]);
-        $post = Post::find($id);
-        $post->update($request->all());
-
-        return redirect()->route('layouts.create')
-            ->with('success', 'Post updated successfully.');
     }
 }

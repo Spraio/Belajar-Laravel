@@ -3,12 +3,19 @@
 @section('title', 'classroom')
 
 @section('content')
-    <h1>test</h1>
+
+    <form action="\classt" method="GET">
+        <input type="text" name="namanya">
+        <button type="submit"> Tambah Kelas</button>
+    </form>
+    <h1>List kelas</h1>
     <table>
         <thead>
             <tr>
                 <td>No.</td>
                 <td>Kelas</td>
+                <td>ID</td>
+                <td>Action</td>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +23,12 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
+                    <td>{{ $data->id }}</td>
+                    <td><button>Ubah</button></td>
+                </tr>
+                <tr>
+
+                    <td></td>
                 </tr>
             @endforeach
         </tbody>

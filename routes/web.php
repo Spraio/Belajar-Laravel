@@ -24,6 +24,12 @@ Route::get('/students', [StudentController::class, 'index']);
 
 Route::post('/layouts/createstudent', StudentController::class.'@create')->name('student.create');
 
+// Route::post('/layouts/createstudent', StudentController::class. {
+
+// });
+
 Route::get('/students', StudentController::class.'@index')->name('layouts.createstudent');
 
-Route::get('/class', [ClassController::class, 'index']);
+Route::get('/class', ClassController::class.'@index')->name('index');
+
+Route::get('/classt', [ClassController::class, 'test']); //cobacoba
