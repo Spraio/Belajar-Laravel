@@ -24,7 +24,7 @@
                         <a class="nav-link active" aria-current="page" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/produk">Produk</a>
+                        <a class="nav-link" href="/students">List mahasiswa</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -33,7 +33,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="\class">class</a></li>
-                            <li><a class="dropdown-item" href="\createstudent">Another action</a></li>
+                            <li><a class="dropdown-item" href="\createstudent">Tambah mahasiswa</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

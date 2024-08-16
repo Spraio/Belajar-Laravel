@@ -18,16 +18,26 @@ class ClassController extends Controller
     {
         $data = htmlspecialchars($_GET['namanya']);
 
-        // dd($name);
-
         ClassRoom::create([
             'name' => $data,
-            'kelas',
         ]);
 
-        //return redirect('/class');
+        return redirect('/class');
 
-        return redirect()->route('index');
+    }
+
+    public function editkelas($name)
+    {
+        $class = ClassRoom::find($name);
+
+        return view('layouts.editclassroom', ['classlist' => $class]);
+
+    }
+
+    public function editt()
+    {
+        $class = ClassRoom::find($name);
+        $class->update($name->all());
 
     }
 }

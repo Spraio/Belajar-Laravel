@@ -3,11 +3,6 @@
 @section('title', 'classroom')
 
 @section('content')
-
-    <form action="\classt" method="GET">
-        <input type="text" name="namanya">
-        <button type="submit"> Tambah Kelas</button>
-    </form>
     <h1>List kelas</h1>
     <table>
         <thead>
@@ -24,7 +19,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
                     <td>{{ $data->id }}</td>
-                    <td><button>Ubah</button></td>
+                    <td><a href="/editkelas/{{ $data->id }}"><button>Ubah</button></a></td>
                 </tr>
                 <tr>
 
@@ -33,4 +28,10 @@
             @endforeach
         </tbody>
     </table>
+    <br>
+    <h2>Tambah kelas</h2>
+    <form action="\classt" method="GET">
+        <input type="text" name="namanya">
+        <button type="submit"> Tambah Kelas</button>
+    </form>
 @endsection

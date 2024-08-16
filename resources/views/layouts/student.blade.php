@@ -3,15 +3,15 @@
 @section('title', 'student')
 
 @section('content')
-    <h1>test</h1>
+    <h1>List murid</h1>
     <table>
         <thead>
             <tr>
                 <td>no.</td>
                 <td>nama</td>
+                <td>jenkel</td>
                 <td>nim</td>
                 <td>kelas</td>
-                <td>jenkel</td>
             </tr>
         </thead>
         <tbody>
@@ -19,11 +19,15 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
+                    <td>{{ $data->gender }}</td>
                     <td>{{ $data->nim }}</td>
                     <td>{{ $data->class_id }}</td>
-                    <td>{{ $data->gender }}</td>
+                    <td><a href="/editmurid/{{ $data->id }}"><button>edit</button></a>
+                        <a href="\hapusmurid\{{ $data->id }}"><button>hapus</button></a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+    <a href="/createstudent"><button>Tambah murid</button></a>
 @endsection
