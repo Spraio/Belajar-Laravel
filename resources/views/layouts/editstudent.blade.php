@@ -26,9 +26,9 @@
 
         <label for="class_id">Kelas:</label>
         <select name="class_id" id="class_id">
-            @foreach ($liststudent as $kelas)
-                <option value={{ $kelas->class_id }}>
-                    {{ $kelas->id }}
+            @foreach ($classt as $data)
+                <option value={{ $data->id }}>
+                    {{ $data->name }}
                 </option>
             @endforeach
         </select>

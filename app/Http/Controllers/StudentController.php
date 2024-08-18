@@ -75,10 +75,10 @@ class StudentController extends Controller
 
         $student = Student::find($id);
         $student->name = $request->get('name');
-        $student->name = $request->get('gender');
-        $student->name = $request->get('nim');
-        $student->name = $request->get('class_id');
-        dd($student);
+        $student->gender = $request->get('gender');
+        $student->nim = $request->get('nim');
+        $student->class_id = $request->get('class_id');
+        // dd($student);
         $student->save();
 
         return redirect('/students');
