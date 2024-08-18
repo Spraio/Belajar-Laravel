@@ -73,13 +73,20 @@ class StudentController extends Controller
         // dd($request);
         // dd($request->get('class_id'));
 
-        $student = Student::find($id);
-        $student->name = $request->get('name');
-        $student->gender = $request->get('gender');
-        $student->nim = $request->get('nim');
-        $student->class_id = $request->get('class_id');
-        // dd($student);
-        $student->save();
+        // $student = Student::find($id);
+        // $student->name = $request->get('name');
+        // $student->gender = $request->get('gender');
+        // $student->nim = $request->get('nim');
+        // $student->class_id = $request->get('class_id');
+        // // dd($student);
+        // $student->save();
+
+        $student = Student::find($id)->update([
+            'name' => $request->name,
+            'gender' => $request->gender,
+            'nim' => $request->nim,
+            'class_id' => $request->class_id,
+        ]);
 
         return redirect('/students');
 
