@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\ClassRoom;
 use App\Models\Student;
+use App\Models\Viewstudent;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
     public function index()
     {
-        $student = Student::all();
+        $viewstudent = Viewstudent::all();
 
-        return view('layouts.student', ['liststudent' => $student]);
+        return view('layouts.student', ['liststudent' => $viewstudent]);
     }
 
     public function create()

@@ -18,10 +18,10 @@
             @foreach ($liststudent as $data)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $data->name }}</td>
+                    <td>{{ $data->nama_murid }}</td>
                     <td>{{ $data->gender }}</td>
                     <td>{{ $data->nim }}</td>
-                    <td>{{ $data->class_id }}</td>
+                    <td>{{ $data->nama_kelas }}</td>
                     <td><a href="/editmurid/{{ $data->id }}"><button>edit</button></a>
                         <a href="\hapusmurid\{{ $data->id }}"><button>hapus</button></a>
                     </td>
